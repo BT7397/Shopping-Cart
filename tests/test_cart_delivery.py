@@ -2,7 +2,7 @@ import pytest
 
 from src.cart_delivery import qualifies_free_delivery
 
-pytest.mark.parametrize(
+@pytest.mark.parametrize(
     ("total_cents", "expected_result"),
     [
         (6000, True),   # qualifies for free delivery

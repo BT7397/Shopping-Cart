@@ -6,4 +6,4 @@ def calculate_total(unit_price_cents, quantity):
     if unit_price_cents < 0 or quantity < 0:
         raise ValueError("price and quantity must be nonnegative")
     
-    return unit_price_cents * max(quantity, 1)
+    return unit_price_cents * quantity

@@ -1,7 +1,7 @@
 import pytest
 from src.cart_total import calculate_total
 
-pytest.mark.parametrize(
+@pytest.mark.parametrize(
     ("unit_price_cents", "quantity", "expected_total"),
     [
         (1000, 3, 3000),  # $10.00 * 3 = $30.00
@@ -22,7 +22,7 @@ def test_calculate_total_zero_price():
 def test_calculate_total_zero_price_and_quantity():
     assert calculate_total(0, 0) == 0  # zero price and quantity should return 0
 
-pytest.mark.parametrize(
+@pytest.mark.parametrize(
     ("unit_price_cents", "quantity"),
     [
         (-1000, 3),  # negative price
