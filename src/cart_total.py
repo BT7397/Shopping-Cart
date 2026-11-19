@@ -7,3 +7,5 @@ def calculate_total(unit_price_cents, quantity):
         raise ValueError("price and quantity must be nonnegative")
     
     return unit_price_cents * quantity
+
+# Testing GitHub Actions path filtering
